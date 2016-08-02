@@ -1,0 +1,10 @@
+overlay	chrome://browser/content/browser.xul	chrome://aastraclicktocall/content/aastraclicktocall.xul
+overlay	chrome://messenger/content/mailWindowOverlay.xul	chrome://aastraclicktocall/content/aastraclicktocall.xul
+overlay	chrome://messenger/content/addressbook/addressbook.xul	chrome://aastraclicktocall/content/contact.xul
+
+content	aastraclicktocall	jar:chrome/aastraclicktocall.jar!/content/
+
+locale	aastraclicktocall	fr-FR	jar:chrome/aastraclicktocall.jar!/locale/fr-FR/
+locale	aastraclicktocall	en-US	jar:chrome/aastraclicktocall.jar!/locale/en-US/
+
+style chrome://messenger/content/addressbook/addressbook.xul chrome://aastraclicktocall/content/contact.css
