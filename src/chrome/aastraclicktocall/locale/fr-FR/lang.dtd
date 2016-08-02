@@ -1,0 +1,19 @@
+﻿<!ENTITY menu.edit_number "Editer le numero">
+<!ENTITY menu.selection "Selection du numero de telephone">
+<!ENTITY dialog.edit.title "Editer le numero">
+<!ENTITY dialog.edit.dial "Appeler">
+<!ENTITY dialog.config.title "AastraClickToCall Preferences">
+<!ENTITY dialog.config.general "Preferences">
+<!ENTITY dialog.config.url "URL Personnalisee">
+<!ENTITY dialog.config.zero "Il doit y avoir un '$0' correspondant au numero de telephone">
+<!ENTITY dialog.config.replaces "Remplacer">
+<!ENTITY dialog.config.in_url "dans l'URL">
+<!ENTITY dialog.config.highlight "Surlignage du texte">
+<!ENTITY dialog.config.digitmin "Minimum de chiffres pour le numero">
+<!ENTITY dialog.config.digitmax "Maximum de chiffres pour le numero">
+<!ENTITY dialog.config.opentype "Ouvrir le lien">
+<!ENTITY dialog.config.opentype0 "en mode silencieux">
+<!ENTITY dialog.config.opentype1 "dans une nouvelle fenetre">
+<!ENTITY dialog.config.opentype2 "dans un nouvel onglet sans focus">
+<!ENTITY dialog.config.opentype3 "dans un nouvel onglet avec focus">
+<!ENTITY dialog.config.about "A Propos">

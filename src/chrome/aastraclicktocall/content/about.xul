@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://aastraclicktocall/content/dialog.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://aastraclicktocall/locale/lang.dtd">
+
+<dialog id="dlgClicktocallAbout"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept"
+	onload="objClicktocallPrefs.getClicktocallVersion()"
+	ondialogaccept=""
+	ondialogcancel=""
+	title="&dialog.config.about;">
+
+	<script type="application/x-javascript" src="chrome://aastraclicktocall/content/prefs.js" />
+	<script type="application/x-javascript" src="chrome://aastraclicktocall/content/config.js" />
+	
+	<hbox>
+		<groupbox style="padding-bottom:8px;">
+		<caption label="&dialog.config.about;" style="text-align: center;"/>
+			<vbox style="width:96px;">
+				<spacer style="height:10px;"/>
+				<hbox>
+					<image src="chrome://aastraclicktocall/content/icon/icon96.png" style="width:96px;height:96px;margin-left:0px;"/>
+					<spacer/>
+				</hbox>
+				<spacer style="height:10px;"/>
+				<label id="idClicktocall_version_label" value="" style="font-weight:bold;"/>
+				<spacer style="height:5px;"/>
+				<label value="2011 by JCP" href="http://firefoxaddon.free.fr" class="text-link"/>
+				<spacer flex="1"/>
+			</vbox>
+		</groupbox>
+	</hbox>
+	
+</dialog>

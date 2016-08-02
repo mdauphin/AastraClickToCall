@@ -1,0 +1,30 @@
+/* From extension Select Address Book Text : https://addons.mozilla.org/fr/thunderbird/addon/select-address-book-text */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+/* Allow the user to select CardViewBox */
+#CardViewBox {
+	-moz-user-focus: normal;
+}
+
+/* CardViewText is now selectable, with the text cursor */
+.CardViewText {
+	/*cursor: text; */
+	cursor: pointer;
+	-moz-user-select: text;
+}  
+
+/* CardViewLink (such as email links) are also selectable */
+.CardViewLink {
+	-moz-user-select: text;
+} 
+
+.phoneNumber {
+	font-weight: bold;
+}
+
+#dialPopup .menu-iconic-icon {
+	max-width: 20px !important;
+	max-height: 20px !important;
+}

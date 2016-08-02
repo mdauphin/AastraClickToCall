@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://aastraclicktocall/content/dialog.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://aastraclicktocall/locale/lang.dtd">
+
+<dialog id="dlgClicktocallEditNumber"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept,cancel"
+	buttonlabelaccept="&dialog.edit.dial;"
+	onload="objClicktocall.initNumberEdit()"
+	ondialogaccept="objClicktocall.setNumberEditReturnValue(true)"
+	ondialogcancel="objClicktocall.setNumberEditReturnValue(false)"
+	title="&dialog.edit.title;">
+
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/prefs.js'></script>
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/functions.js'></script>
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/countryPrefix.js'></script>
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/aastraclicktocall.js'></script>
+
+
+	<vbox>
+		<hbox align="center">
+			<textbox id="idClicktocallInputNr" flex="1" onkeypress="objClicktocallFunctions.checkKey(event,'0123456789')"/>
+		</hbox>
+
+	</vbox>
+
+</dialog>

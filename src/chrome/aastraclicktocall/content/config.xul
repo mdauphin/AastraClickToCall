@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://aastraclicktocall/content/dialog.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://aastraclicktocall/locale/lang.dtd">
+
+<dialog id="dlgClicktocallConfig"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept,cancel"
+	onload="objClicktocallConfig.initConfig();objClicktocallConfig.urlChanged(document.getElementById('idClicktocallPref_url_input').value);"
+	ondialogaccept="objClicktocallConfig.onAccept()"
+	ondialogcancel=""
+	title="&dialog.config.title;">
+
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/prefs.js'></script>
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/functions.js'></script>
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/config.js'></script>
+	
+	<hbox>
+		<rows>
+			<row align="center" id="aastraclicktocall_img">
+				<image src="chrome://aastraclicktocall/content/icon/aastraclicktocall.png" style="text-align: center;"/>
+			</row>
+		</rows>
+	</hbox>
+	
+	<hbox>
+		<groupbox style="padding-bottom:8px;">
+		<caption label="&dialog.config.general;"/>
+
+			<grid>
+				<columns>
+					<column flex="1"/>
+					<column flex="2"/>
+				</columns>
+				<rows>
+					<row align="center">
+						<label value="&dialog.config.highlight;:"/>
+						<textbox id="idClicktocallPref_highlight" />
+					</row>
+					<row align="center">
+						<label value="&dialog.config.digitmin;:"/>
+						<textbox id="idClicktocallPref_digitmin" />
+					</row>
+					<row align="center">
+						<label value="&dialog.config.digitmax;:"/>
+						<textbox id="idClicktocallPref_digitmax" />
+					</row>
+				</rows>
+			</grid>
+		</groupbox>
+
+	</hbox>
+	
+	<groupbox id="idClicktocallPref_custom_group" style="padding-bottom:8px;">
+	<caption id="idClicktocallPref_custom_caption" label="&dialog.config.url;"/>
+	<label value="&dialog.config.zero;"/>
+	<vbox>
+		<description id="idClicktocallPref_url_result" class="urlresult">
+		</description>
+
+		<spacer flex="2"/>
+			<textbox id="idClicktocallPref_url_input" oninput="objClicktocallConfig.urlChanged(this.value)" value=" " />
+		<spacer flex="2"/>
+
+		<grid>
+			<columns>
+				<column flex="0"/>
+				<column flex="2"/>
+				<column flex="3"/>
+			</columns>
+			<rows>
+				<row align="center" id="idClicktocallPref_param1_row" style="margin-top:4px;">
+					<label id="idClicktocallPref_param1_caption"/>
+					<textbox id="idClicktocallPref_param1_value" emptytext="&dialog.config.replaces; $1 &dialog.config.in_url;" 
+						oninput="objClicktocallConfig.paramChanged(1, this.value)"/>
+					<spacer flex="2"/>
+				</row>
+				<row align="center" id="idClicktocallPref_param2_row">
+					<label id="idClicktocallPref_param2_caption"/>
+					<textbox id="idClicktocallPref_param2_value" emptytext="&dialog.config.replaces; $2 &dialog.config.in_url;" 
+						oninput="objClicktocallConfig.paramChanged(2, this.value)"/>
+				</row>
+				<row align="center" style="margin-top:4px;">
+					<label value="&dialog.config.opentype;:"/>
+					<menulist id="idClicktocallPref_opentype">
+						<menupopup>
+							<menuitem label="&dialog.config.opentype0;" value="0"/>
+							<menuitem label="&dialog.config.opentype1;" value="1"/>
+							<menuitem label="&dialog.config.opentype2;" value="2"/>
+							<menuitem label="&dialog.config.opentype3;" value="3"/>
+						</menupopup>
+					</menulist>
+				</row>
+			</rows>
+		</grid>
+
+		
+	</vbox>
+	</groupbox>
+	
+</dialog>

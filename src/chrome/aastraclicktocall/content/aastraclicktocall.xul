@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://aastraclicktocall/content/dialog.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://aastraclicktocall/locale/lang.dtd">
+<overlay xmlns='http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'>
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="ClicktocallstringBundle" src="chrome://aastraclicktocall/locale/lang.properties"/>
+	</stringbundleset>
+
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/prefs.js'></script>
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/functions.js'></script>
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/countryPrefix.js'></script>
+	<script type='application/x-javascript' src='chrome://aastraclicktocall/content/aastraclicktocall.js'></script>
+
+	<statusbar id="status-bar">
+		<statusbarpanel id="idClicktocall_status">
+			<menupopup id="idClicktocall_status_popup" onpopupshowing="objClicktocall.modifyPopup(event)">
+				<menuitem id="idClicktocall_status_activity" oncommand="objClicktocall.modifyActive()" />
+				<menuitem id="idClicktocall_status_blacklist" oncommand="objClicktocall.modifyBlacklist()" />
+			</menupopup>
+			<hbox id="idClicktocall_statusicon" context="idClicktocall_status_popup" class="statusbarpanel-menu-iconic" src="chrome://aastraclicktocall/content/icon/icon18_active.png" />
+		</statusbarpanel>
+	</statusbar>
+
+	<menupopup id="contentAreaContextMenu">
+		<menu id="idClicktocall_menu_context" label="&menu.selection;" collapsed="true" insertbefore="context-sep-stop" class="menu-iconic" image="chrome://aastraclicktocall/content/icon/icon_menu.png">
+			<menupopup id="idClicktocall_popup_context">
+				<hbox id="idClicktocall_hbox_context">
+					<image src="chrome://aastraclicktocall/content/icon/call.png" class="clicktocall-icon"/>
+					<menuitem id="idClicktocall_context" class="menuitem-non-iconic"/>
+				</hbox>
+				<hbox id="idClicktocall_hbox_edit_context">
+					<image src="chrome://aastraclicktocall/content/icon/edit.png" class="clicktocall-icon"/>
+					<menuitem id="idClicktocall_edit_context" class="menuitem-non-iconic" label="&menu.edit_number;"/>
+				</hbox>
+			</menupopup>
+		</menu>
+	</menupopup>
+
+	<popupset>
+	<menupopup id="idClicktocall_popup_dial">
+		<hbox id="idClicktocall_hbox_dial">
+			<image src="chrome://aastraclicktocall/content/icon/call.png" class="clicktocall-icon"/>
+			<menuitem id="idClicktocall_dial" class="menuitem-non-iconic"/>
+		</hbox>
+		<hbox id="idClicktocall_hbox_edit_dial">
+			<image src="chrome://aastraclicktocall/content/icon/edit.png" class="clicktocall-icon"/>
+			<menuitem id="idClicktocall_edit_dial" class="menuitem-non-iconic" label="&menu.edit_number;" image=""/>
+		</hbox>
+	</menupopup>
+	</popupset>
+
+	<menupopup id="menu_ToolsPopup">
+		<menu id="idClicktocall_menu" label="AastraClickToCall" insertafter="devToolsSeparator" class="menu-iconic" image="chrome://aastraclicktocall/content/icon/icon_menu.png">
+			<menupopup>
+				<menuitem id="idClicktocall_menu_config" label="&dialog.config.title;" oncommand="objClicktocallPrefs.showConfigDialog()"/>
+				<menuseparator />
+				<menuitem id="idClicktocall_menu_about" label="&dialog.config.about;" oncommand="objClicktocallPrefs.showAboutDialog()"/>
+			</menupopup>
+		</menu>
+	</menupopup>
+
+</overlay>
+

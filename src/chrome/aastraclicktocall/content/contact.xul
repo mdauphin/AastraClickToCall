@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay [
+  <!ENTITY % messengerDTD SYSTEM "chrome://messenger/locale/messenger.dtd">
+  %messengerDTD;
+  <!ENTITY % textcontextDTD SYSTEM "chrome://global/locale/textcontext.dtd">
+  %textcontextDTD;
+  <!ENTITY % clicktocallDTD SYSTEM "chrome://aastraclicktocall/locale/lang.dtd">
+  %clicktocallDTD;
+]>
+
+
+<overlay id="contact-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<script type="application/x-javascript" src="chrome://aastraclicktocall/content/prefs.js"></script>	
+	<script type="application/x-javascript" src="chrome://aastraclicktocall/content/functions.js"></script>
+	<script type="application/x-javascript" src="chrome://aastraclicktocall/content/countryPrefix.js"></script>
+	<script type="application/x-javascript" src="chrome://aastraclicktocall/content/aastraclicktocall.js"></script>
+	<script type="application/x-javascript" src="chrome://aastraclicktocall/content/contact.js"></script>
+
+	<window id="addressbookWindow">
+			
+		<popupset>
+			<menupopup id="dialPopup">
+				<hbox id="numberToDial_box">
+					<image src="chrome://aastraclicktocall/content/icon/call.png" class="clicktocall-icon"/>
+					<menuitem id="numberToDial" class="menuitem-non-iconic"/>
+				</hbox>
+				<hbox id="numberToEdit_box">
+					<image src="chrome://aastraclicktocall/content/icon/edit.png" class="clicktocall-icon"/>
+					<menuitem id="numberToEdit" class="menuitem-non-iconic" label="&menu.edit_number;"/>
+				</hbox>
+			</menupopup>
+		</popupset>
+	</window>
+
+	<!-- Modify the CardViewBox to add the context menu (From extension Select Address Book Text) -->
+	<vbox id="CardViewBox" context="cardViewContext_selectAddressBook"/>
+	
+</overlay>

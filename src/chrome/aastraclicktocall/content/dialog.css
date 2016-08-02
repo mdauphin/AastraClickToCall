@@ -1,0 +1,31 @@
+
+.emptyUrl {
+	color: #a0a0a0;
+}
+
+.numberUrl {
+	color: #008000;
+}
+
+.paramUrl {
+	color: #000080;
+}
+
+.resultUrl {
+	height:4.2em;
+	padding:2px 3px;
+	border:1px solid #e0e0e0;
+	background-color:#f0f0f0;
+	margin-left:4px;
+}
+
+menuitem.menuitem-non-iconic {
+	-moz-binding: url("chrome://global/content/bindings/menu.xml#menubutton-item");
+	max-height: 20px !important;
+	max-width: 130px;
+}
+
+.clicktocall-icon {
+	max-width: 20px !important;
+	max-height: 20px !important;
+}

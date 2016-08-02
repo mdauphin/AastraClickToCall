@@ -1,0 +1,19 @@
+﻿<!ENTITY menu.edit_number "Edit phone number">
+<!ENTITY menu.selection "Phone number selection">
+<!ENTITY dialog.edit.title "Edit number">
+<!ENTITY dialog.edit.dial "Call">
+<!ENTITY dialog.config.title "AastraClickToCall Preferences">
+<!ENTITY dialog.config.general "General Settings">
+<!ENTITY dialog.config.url "Custom URL">
+<!ENTITY dialog.config.zero "Must contain '$0' for phone number">
+<!ENTITY dialog.config.replaces "Replaces">
+<!ENTITY dialog.config.in_url "in URL string">
+<!ENTITY dialog.config.highlight "Text highlighting">
+<!ENTITY dialog.config.digitmin "Minimum digits for phone number">
+<!ENTITY dialog.config.digitmax "Maximum digits for phone number">
+<!ENTITY dialog.config.opentype "Open link">
+<!ENTITY dialog.config.opentype0 "silently in the background">
+<!ENTITY dialog.config.opentype1 "in a new window">
+<!ENTITY dialog.config.opentype2 "in a new tab without focus">
+<!ENTITY dialog.config.opentype3 "in a new tab with focus"> 
+<!ENTITY dialog.config.about "About">
